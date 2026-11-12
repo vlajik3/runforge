@@ -1,0 +1,27 @@
+.loading {
+  padding: 24px 20px;
+}
+
+.loading__label {
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.loading__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.loading__row span {
+  width: 22%;
+  height: 20px;
+  border-radius: 4px;
+  background: var(--color-subtle);
+}
+
+.loading__row span:first-child {
+  width: 40%;
+}

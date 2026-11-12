@@ -1,0 +1,9 @@
+node_modules
+dist
+output
+coverage
+.agents
+.idea
+tmp
+package-lock.json
+AGENTS.md

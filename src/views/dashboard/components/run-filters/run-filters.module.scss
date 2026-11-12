@@ -1,0 +1,123 @@
+.filters {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.filters__statuses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.filters__count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.filters__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+}
+
+.filters__label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.filters__search {
+  min-width: 0;
+  flex: 1 1 260px;
+}
+
+.filters__input {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  padding-left: 12px;
+  border: 1px solid var(--color-control-border);
+  border-radius: var(--radius-control);
+  color: var(--color-text-secondary);
+
+  &:focus-within {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+}
+
+.filters__input input {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: var(--color-text);
+  font-size: 16px;
+
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  &::placeholder {
+    color: var(--color-text-secondary);
+  }
+}
+
+.filters__clear {
+  min-height: 42px;
+  height: 42px;
+}
+
+.filters__sort {
+  position: relative;
+  flex: 1 1 180px;
+}
+
+.filters__sort::after {
+  position: absolute;
+  right: 16px;
+  bottom: 20px;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentcolor;
+  border-bottom: 1.5px solid currentcolor;
+  content: '';
+  pointer-events: none;
+  transform: rotate(45deg);
+}
+
+.filters__sort select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 40px 0 12px;
+  border: 1px solid var(--color-control-border);
+  border-radius: var(--radius-control);
+  appearance: none;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media (width >= 768px) {
+  .filters__search {
+    max-width: 440px;
+  }
+
+  .filters__sort {
+    max-width: 200px;
+    margin-left: auto;
+  }
+
+  .filters__input input {
+    font-size: 13px;
+  }
+}

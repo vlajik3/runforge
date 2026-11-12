@@ -1,0 +1,20 @@
+node_modules/
+dist/
+output/
+coverage/
+.vitest/
+.vite/
+tmp/
+*.local
+*.log
+.idea/
+.agents/
+.DS_Store
+
+# Local AI instructions
+AGENTS.md
+
+# Local environment variables
+.env
+.env.*
+!.env.example

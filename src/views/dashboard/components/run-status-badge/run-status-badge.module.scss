@@ -1,0 +1,32 @@
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border: 1px solid currentcolor;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.status--queued {
+  background: var(--color-queued-bg);
+  color: var(--color-queued);
+}
+
+.status--running {
+  background: var(--color-running-bg);
+  color: var(--color-running);
+}
+
+.status--succeeded {
+  background: var(--color-succeeded-bg);
+  color: var(--color-succeeded);
+}
+
+.status--failed {
+  background: var(--color-failed-bg);
+  color: var(--color-failed);
+}

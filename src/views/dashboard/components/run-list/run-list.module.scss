@@ -1,0 +1,185 @@
+.list {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.list__caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.list thead {
+  display: none;
+}
+
+.list tbody {
+  display: block;
+}
+
+.list tbody tr {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  padding: 24px 20px;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: background var(--motion-fast);
+
+  &:hover {
+    background: var(--color-background);
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.list td {
+  min-width: 0;
+  font-size: 14px;
+}
+
+.list__name {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.list__runid {
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.list__trigger {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.list__repository span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-wrap: anywhere;
+}
+
+.list__branch {
+  margin-top: 5px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.list__date,
+.list__duration {
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.list__mobile-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 10px;
+}
+
+.list__arrow {
+  display: none;
+  color: var(--color-text-secondary);
+}
+
+@media (width >= 768px) {
+  .list {
+    table-layout: fixed;
+  }
+
+  .list thead {
+    display: table-header-group;
+  }
+
+  .list th {
+    padding: 14px 10px;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-background);
+    color: var(--color-text-secondary);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+
+  .list th:first-child {
+    width: 26%;
+    padding-left: 20px;
+  }
+
+  .list th:nth-child(2) {
+    width: 23%;
+  }
+
+  .list th:nth-child(3) {
+    width: 17%;
+  }
+
+  .list th:nth-child(4) {
+    width: 17%;
+  }
+
+  .list th:nth-child(5) {
+    width: 13%;
+  }
+
+  .list th:last-child {
+    width: 4%;
+  }
+
+  .list tbody {
+    display: table-row-group;
+  }
+
+  .list tbody tr {
+    display: table-row;
+  }
+
+  .list td {
+    padding: 18px 10px;
+    vertical-align: middle;
+  }
+
+  .list__name {
+    display: table-cell;
+    padding-left: 20px;
+  }
+
+  .list__runid {
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .list__trigger {
+    min-height: 30px;
+  }
+
+  .list__mobile-label {
+    display: none;
+  }
+
+  .list__duration,
+  .list__date {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .list__arrow {
+    display: table-cell;
+    padding-left: 0;
+  }
+}

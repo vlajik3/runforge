@@ -1,0 +1,36 @@
+:root {
+  --primitive-cream: #f8f6f1;
+  --primitive-white: #fff;
+  --primitive-navy: #0b1d35;
+  --primitive-slate: #536171;
+  --color-background: var(--primitive-cream);
+  --color-surface: var(--primitive-white);
+  --color-primary: var(--primitive-navy);
+  --color-primary-hover: #1d3655;
+  --color-on-primary: var(--primitive-white);
+  --color-text: var(--primitive-navy);
+  --color-text-secondary: var(--primitive-slate);
+  --color-subtle: #f0ede6;
+  --color-border: #dadfe4;
+  --color-control-border: #667588;
+  --color-focus: #245fb2;
+  --color-sidebar-muted: #aebcd0;
+  --color-sidebar-surface: #162b44;
+  --color-sidebar-border: #344861;
+  --color-code-text: #e7edf4;
+  --color-scrim: #07172bb3;
+  --color-queued: #49586b;
+  --color-queued-bg: #edf0f4;
+  --color-running: #1d4d8f;
+  --color-running-bg: #eaf1fc;
+  --color-succeeded: #196143;
+  --color-succeeded-bg: #e8f4ed;
+  --color-failed: #a32e35;
+  --color-failed-bg: #fcecef;
+  --radius-control: 8px;
+  --radius-panel: 12px;
+  --font-body: system-ui, 'Segoe UI', sans-serif;
+  --font-heading: georgia, serif;
+  --font-mono: ui-monospace, consolas, monospace;
+  --motion-fast: 140ms ease;
+}
